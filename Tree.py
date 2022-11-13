@@ -80,7 +80,10 @@ def remove(List,value):
       List[(index * 2) + 1] = -1
     if List[index * 2 ]!= -1 and List[(index * 2) + 1] != -1:
       index = downRemove(List,index)
-      List[index * 2 ] = -1
+      if List[(index * 2) + 1] != -1:
+        List[index * 2] = List[(index * 2) + 1]
+        List[(index * 2) + 1] = -1
+
       
       
     
